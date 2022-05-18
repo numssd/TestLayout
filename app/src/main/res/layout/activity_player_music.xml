@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenPlayer"
+    tools:context=".PlayerMusicActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogoSong"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/m1000x1000" />
+
+    <TextView
+        android:id="@+id/textViewSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/name_song_text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoSong" />
+
+    <TextView
+        android:id="@+id/textViewArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/artist_text"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSongName" />
+
+    <ImageView
+        android:id="@+id/imageViewSongBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewItemMenu"
+        app:layout_constraintTop_toTopOf="@+id/textViewSongName"
+        app:srcCompat="@drawable/ic_baseline_reply_24" />
+
+    <ImageView
+        android:id="@+id/imageViewItemMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="45dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewSongName"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+    <SeekBar
+        android:id="@+id/volumeControl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:progressBackgroundTint="#F6F6F6"
+        android:thumbTint="#F3F3F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArtistName" />
+
+    <TextView
+        android:id="@+id/textViewTimeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/time_start"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeControl" />
+
+    <TextView
+        android:id="@+id/textViewTimeEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/time_end"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeControl" />
+
+    <ImageView
+        android:id="@+id/imageViewPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeControl"
+        app:srcCompat="@drawable/ic_baseline_play_circle_outline_24" />
+
+    <ImageView
+        android:id="@+id/imageViewNextSong"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlay"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlay"
+        app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+    <ImageView
+        android:id="@+id/imageViewBackSong"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPlay"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlay"
+        app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+    <ImageView
+        android:id="@+id/imageViewAddTop"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewBackSong"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackSong"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNextSong"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNextSong"
+        app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+    <ImageView
+        android:id="@+id/imageViewReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCheck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_reload" />
+
+    <ImageView
+        android:id="@+id/imageViewCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewTimer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewReload"
+        app:srcCompat="@drawable/ic_baseline_3g" />
+
+    <ImageView
+        android:id="@+id/imageViewTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewScan"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCheck"
+        app:srcCompat="@drawable/ic_baseline_timer_24" />
+
+    <ImageView
+        android:id="@+id/imageViewScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/logo_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewTimer"
+        app:srcCompat="@drawable/ic_baseline_swap_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

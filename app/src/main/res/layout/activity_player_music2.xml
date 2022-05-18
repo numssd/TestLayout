@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greenPlayer"
+    android:orientation="vertical"
+    tools:context=".PlayerMusicActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="30dp"
+            android:contentDescription="@string/logo_text"
+            android:src="@drawable/m1000x1000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_song_text"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewArtist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/artist_text"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo_text"
+                app:srcCompat="@drawable/ic_baseline_reply_24" />
+
+            <ImageView
+                android:id="@+id/imageViewMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo_text"
+                app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/volumeControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:progressBackgroundTint="#F6F6F6"
+            android:thumbTint="#F3F3F3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/time_start"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/time_end"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewAddTop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+        <ImageView
+            android:id="@+id/imageViewBackSong"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_skip_previous_24" />
+
+        <ImageView
+            android:id="@+id/imageViewPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_play_circle_outline_24" />
+
+        <ImageView
+            android:id="@+id/imageViewNextSong"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_skip_next_24" />
+
+        <ImageView
+            android:id="@+id/imageViewTop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/imageViewReload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_reload" />
+
+        <ImageView
+            android:id="@+id/imageViewCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_3g" />
+
+        <ImageView
+            android:id="@+id/imageViewTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_timer_24" />
+
+        <ImageView
+            android:id="@+id/imageViewScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:contentDescription="@string/logo_text"
+            app:srcCompat="@drawable/ic_baseline_swap_24" />
+
+    </LinearLayout>
+
+</LinearLayout>
